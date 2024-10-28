@@ -33,14 +33,16 @@ rsync -av DDFA/ DeepDFA/
 
 
 echo "실행중..."
-cd /content/DeepDFA/DDFA/sastvd/scripts
-python /content/DeepDFA/DDFA/sastvd/scripts/prepare.py --dataset bigvul
-python /content/DeepDFA/DDFA/sastvd/scripts/getgraphs.py bigvul --overwrite
-python /content/DeepDFA/DDFA/sastvd/scripts/dbize.py
-python /content/DeepDFA/DDFA/sastvd/scripts/dbize_graphs.py
-python /content/DeepDFA/DDFA/sastvd/scripts/abstract_dataflow_full.py --no-cache --stage 1
-python /content/DeepDFA/DDFA/sastvd/scripts/abstract_dataflow_full.py --no-cache --stage 2
-python /content/DeepDFA/DDFA/sastvd/scripts/dbize_absdf.py
+cd /content/DeepDFA/DDFA/scripts
+bash preprocess.sh
+#cd /content/DeepDFA/DDFA/sastvd/scripts
+#python /content/DeepDFA/DDFA/sastvd/scripts/prepare.py --dataset bigvul
+#python /content/DeepDFA/DDFA/sastvd/scripts/getgraphs.py bigvul --overwrite
+#python /content/DeepDFA/DDFA/sastvd/scripts/dbize.py
+#python /content/DeepDFA/DDFA/sastvd/scripts/dbize_graphs.py
+#python /content/DeepDFA/DDFA/sastvd/scripts/abstract_dataflow_full.py --no-cache --stage 1
+#python /content/DeepDFA/DDFA/sastvd/scripts/abstract_dataflow_full.py --no-cache --stage 2
+#python /content/DeepDFA/DDFA/sastvd/scripts/dbize_absdf.py
 
 
 
